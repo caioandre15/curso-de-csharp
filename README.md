@@ -38,5 +38,44 @@ ex: string nome = "Caio";
 
 As variaveis numericas possuem duas propriedades para sabermos o minimo e o maximo de valor limite para armazenamento.  
 ex.: int n1 = int.MinValue;  
-     int n2 = int.MaxValuel;  
+     int n2 = int.MaxValuel;
+
+### Restrições e convenções para nomes de variáveis
+
+- Não pode começar com dígito: use uma letra ou _  
+- Não pode usar acentos ou til  
+- Não pode ter espaço em branco  
+- Use nomes que tenham um significado claro  
+
+#### Convenções:  
+
+- Camel Case: lastName (parâmetros de métodos, variáveis dentro de métodos)  
+- Pascal Case: LastName (namespaces, classe, properties e métodos)  
+- Padrão _lastName (atributos "internos" da classe) 
+
+Diferença entre properties e atributos:   
+
+Propertie: public string Titular { get; set; }  
+Atributos: private double _saldo;  
+
+ex. de classe seguindo as convençoes:  
+````
+namespace Curso
+{
+  class ContaBancaria
+  {
+    public string Titular { get; set; }
+    private double _saldo;
+    public void Deposito(double quantia)
+    {
+       _saldo += quantia;
+    }
+    public double GetSaldo()
+    {
+      return _saldo;
+    }
+  }
+}
+````
+     
 
