@@ -1,5 +1,5 @@
-# curso-de-csharp
-
+# Curso de C#
+## Recapitulação de Lógica de Programação
 ### Tipos básicos de C# - Parte 1  
 
 Tipos mais usados:  
