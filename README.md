@@ -58,7 +58,7 @@ Diferença entre properties e atributos:
 Propertie: public string Titular { get; set; }  
 Atributos: private double _saldo;  
 
-ex. de classe seguindo as convençoes:  
+ex. de classe seguindo as convenções:  
 ````
 namespace Curso
 {
