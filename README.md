@@ -1,6 +1,6 @@
 # curso-de-csharp
 
-## Tipos básicos de C# - Parte 1  
+### Tipos básicos de C# - Parte 1  
 
 Tipos mais usados:  
 
@@ -22,7 +22,7 @@ Conceito de overflow:
 
 Ao utilizar o tipo Long é recomendavel utilizar o L maiusculo no final do valor recebido.  
 
-Tipos básicos de C# - Parte 2  
+### Tipos básicos de C# - Parte 2  
 
 O tipo char deve ser setado com aspas simples.  
 ex.: char genero = 'F';  
