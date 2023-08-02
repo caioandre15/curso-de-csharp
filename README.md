@@ -55,8 +55,8 @@ ex.: int n1 = int.MinValue;
 
 Diferença entre properties e atributos:   
 
-Propertie: public string Titular { get; set; }  
-Atributos: private double _saldo;  
+Propertie: ````public string Titular { get; set; }````  
+Atributos: ````private double _saldo;````  
 
 ex. de classe seguindo as convenções:  
 ````
