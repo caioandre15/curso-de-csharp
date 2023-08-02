@@ -94,7 +94,7 @@ double saldo = 10.35784;
 Console.WriteLine(saldo.ToString("F2"));
 ````
 
-Para alterar a forma de exibição do valor representado como (,) que está no padrão de formatção brasileiro, devemos adicionar o namespace Globalization, conforme abaixo.  
+Para alterar a forma de exibição do valor representado como (,) que está no padrão de formatação brasileiro, devemos adicionar o namespace Globalization, conforme abaixo.  
 
 ````
 using System.Globalization;
