@@ -121,3 +121,28 @@ Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a "
 + saldo.ToString("F2", CultureInfo.InvariantCulture) + " reais");
 ````
 
+### Funções  
+
+Principais vantagens: modularização, delegação e reaproveitamento.  
+
+Ex:  
+````
+static void Soma(int a, int b){  
+  int resultado;  
+  resultado = a + b;  
+  return resultado  
+}  
+````
+
+### Debug Visual Studio  
+Teclas  
+• F9 - marcar/desmarcar breakpoint  
+• F5 - iniciar/continuar o debug  
+• F10 - executar um passo (pula função)  
+• F11 - executar um passo (entra na função)  
+• SHIFT+F11 - sair do método em execução  
+• SHIFT+F5 - parar debug  
+• Janelas  
+• Watch (expressões personalizadas)  
+• Autos (expressões "interessantes" detectadas pelo Visual Studio)  
+• Locals (variáveis locais do metodo em execução)  
