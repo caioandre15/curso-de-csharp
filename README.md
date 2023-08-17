@@ -131,10 +131,10 @@ Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a "
 | /        | divisão          |
 | %        | resto da divisão |
 
-1) * / % tem precedência maior que + -  
+1) ''*'' / % tem precedência maior que + -  
 2) Exemplos:  
-3 + 4 * 2 Resultado: 11  
-(3 + 4) * 2 Resultado: 14  
+3 + 4 ``*`` 2 Resultado: 11  
+(3 + 4) ``*`` 2 Resultado: 14  
 3) Pode-se usar parêntesis à vontade  
 4) Exemplo com mod:  
 17 % 3 Resultado: 2  
