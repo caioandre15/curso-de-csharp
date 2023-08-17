@@ -414,3 +414,67 @@ Teclas
 • Watch (expressões personalizadas)  
 • Autos (expressões "interessantes" detectadas pelo Visual Studio)  
 • Locals (variáveis locais do metodo em execução)  
+
+### Estruturas de repetição  
+
+Estrutura "enquanto"  
+````
+ while ( condição ) {
+   comando 1
+   comando 2
+ }
+````
+Regra:  
+V: executa e volta  
+F: pula fora  
+
+Em C#, as estruturas de repetição, também conhecidas como loops, permitem que você execute um bloco de código repetidamente enquanto uma condição específica for verdadeira. Essas estruturas são úteis quando você deseja realizar tarefas repetitivas, como percorrer uma lista de itens, calcular somas, imprimir sequências e muito mais. Existem duas principais estruturas de repetição em C#: for e while, além de uma variação do for chamada foreach. Aqui estão as principais informações sobre cada uma delas:
+
+1. For Loop:
+O loop for é usado quando você conhece o número exato de iterações que deseja realizar. Ele consiste em três partes: a inicialização (executada uma vez no início), a condição (verificada antes de cada iteração) e a atualização (executada após cada iteração).
+
+Exemplo de for loop:  
+
+````
+for (int i = 0; i < 5; i++) {
+    Console.WriteLine($"Iteração {i}");
+}
+````
+
+2. While Loop:  
+O loop while é usado quando você deseja repetir um bloco de código enquanto uma condição for verdadeira. A condição é verificada antes de cada iteração.
+
+Exemplo de while loop:  
+
+````
+int contador = 0;
+while (contador < 5) {
+    Console.WriteLine($"Contador: {contador}");
+    contador++;
+}
+````
+
+3. Do-While Loop:  
+O loop do-while é semelhante ao while, mas a condição é verificada após cada iteração, garantindo que o bloco de código seja executado pelo menos uma vez.
+
+Exemplo de do-while loop:  
+
+````
+int numero = 10;
+do {
+    Console.WriteLine($"Número: {numero}");
+    numero--;
+} while (numero > 0);
+````
+
+4. Foreach Loop:  
+O loop foreach é usado para percorrer elementos em uma coleção, como arrays, listas, dicionários, etc. Ele é especialmente útil quando você não precisa acompanhar um contador ou índice.
+
+Exemplo de foreach loop:  
+````
+int[] numeros = { 1, 2, 3, 4, 5 };
+foreach (int num in numeros) {
+    Console.WriteLine($"Número: {num}");
+}
+````
+É importante escolher a estrutura de repetição que melhor se adapte ao seu cenário específico. O for é ideal quando o número de iterações é conhecido antecipadamente, o while é útil quando a condição de parada pode variar e o foreach é excelente para percorrer coleções sem a necessidade de rastrear índices ou contadores. 
