@@ -131,7 +131,7 @@ Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a "
 | /        | divisão          |
 | %        | resto da divisão |
 
-1) ''*'' / % tem precedência maior que + -  
+1) ``*`` / % tem precedência maior que + -  
 2) Exemplos:  
 3 + 4 ``*`` 2 Resultado: 11  
 (3 + 4) ``*`` 2 Resultado: 14  
@@ -148,7 +148,7 @@ Resto igual a 2.
 | =        | a = 10; | a RECEBE 10     |
 | +=       | a += 2; | a RECEBE a + 2; |
 | -=       | a -= 2; | a RECEBE a - 2; |
-| *=       | a *= 2; | a RECEBE a * 2; |
+| ``*``=       | a *= 2; | a RECEBE a * 2; |
 | /=       | a /= 2; | a RECEBE a / 2; |
 | %=       | a %= 3; | a RECEBE a % 3; |
 
