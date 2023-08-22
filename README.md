@@ -478,3 +478,109 @@ foreach (int num in numeros) {
 }
 ````
 É importante escolher a estrutura de repetição que melhor se adapte ao seu cenário específico. O for é ideal quando o número de iterações é conhecido antecipadamente, o while é útil quando a condição de parada pode variar e o foreach é excelente para percorrer coleções sem a necessidade de rastrear índices ou contadores. 
+
+## Programação Orientada a Objetos (POO):  
+A programação orientada a objetos é um paradigma de programação que se baseia na organização de código em torno de "objetos", que são instâncias de classes. Uma classe é um modelo que define atributos (variáveis) e métodos (funções) que operam sobre esses atributos. As vantagens da programação orientada a objetos incluem:  
+
+- Abstração: Permite modelar objetos do mundo real de forma mais direta, tornando o código mais compreensível e reutilizável.  
+- Encapsulamento: As informações sobre o objeto são encapsuladas dentro da classe, o que protege os dados internos e limita o acesso a eles.  
+- Herança: Permite criar novas classes baseadas em classes existentes, compartilhando características e comportamentos comuns, o que economiza tempo e reduz redundâncias.  
+- Polimorfismo: Permite que diferentes objetos respondam de maneira diferente a chamadas de métodos com o mesmo nome, tornando o código mais flexível e extensível.  
+  
+Programação Procedural:  
+A programação procedural é um paradigma mais antigo e se concentra em uma abordagem linear, onde o código é organizado em funções/procedimentos que manipulam dados. Embora seja menos abstrata que a POO, ainda é amplamente usada para tarefas mais simples e diretas.  
+
+Agora, sobre a diferença entre a memória Stack e Heap:  
+
+Memória Stack (Pilha):  
+A memória Stack é usada para armazenar variáveis locais e informações de contexto de execução durante a chamada de funções. Ela opera em uma estrutura de pilha, onde a alocação e desalocação de memória são eficientes, seguindo a regra "último a entrar, primeiro a sair" (LIFO - Last In, First Out). No entanto, a capacidade de armazenamento na Stack é limitada e a alocação é rápida, mas rígida em termos de tamanho.  
+
+Memória Heap (Monte):  
+A memória Heap é uma área de memória usada para armazenar dados de tamanho variável e objetos que podem ser alocados dinamicamente durante a execução do programa. Ao contrário da Stack, a alocação na Heap é mais flexível, mas também pode ser mais lenta e requer gerenciamento explícito (alocação e liberação de memória). A memória Heap é usada, por exemplo, quando se cria objetos grandes ou quando a quantidade de memória necessária é desconhecida durante a compilação.  
+
+Em resumo, a programação orientada a objetos oferece uma maneira mais estruturada e modular de organizar o código, permitindo a criação de sistemas mais flexíveis e reutilizáveis. A escolha entre os paradigmas POO e procedural depende das necessidades do projeto. A diferença entre a memória Stack e Heap reside na forma como a memória é alocada e desalocada, com a Stack sendo mais eficiente e a Heap sendo mais flexível, mas exigindo um gerenciamento cuidadoso.  
+
+### Pilares de POO com código C#:  
+1. Encapsulamento:  
+O encapsulamento é a prática de esconder os detalhes internos de uma classe e fornecer uma interface controlada para interagir com ela. Isso ajuda a proteger os dados e garante que eles sejam acessados e modificados apenas de maneira controlada. Em C#, o encapsulamento é alcançado usando modificadores de acesso (public, private, protected) e propriedades.  
+````
+class Car
+{
+    private int speed;
+
+    public int Speed
+    {
+        get { return speed; }
+        set { speed = value > 0 ? value : 0; }
+    }
+}
+````
+2. Abstração:  
+A abstração envolve a criação de modelos simplificados que representam objetos do mundo real em um programa. Ela ajuda a focar nos aspectos relevantes do objeto e a ocultar os detalhes irrelevantes. Em C#, a abstração é realizada usando classes abstratas e interfaces.  
+````
+abstract class Shape
+{
+    public abstract double Area();
+}
+
+class Circle : Shape
+{
+    private double radius;
+
+    public Circle(double r)
+    {
+        radius = r;
+    }
+
+    public override double Area()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+````
+3. Herança:  
+A herança permite criar novas classes baseadas em classes existentes, compartilhando características e comportamentos. A classe derivada herda os membros da classe base e pode adicionar ou substituir comportamentos. Em C#, a herança é implementada usando a palavra-chave class e a indicação de uma classe base com :.
+````
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+````
+4. Polimorfismo:  
+O polimorfismo permite que um mesmo método tenha diferentes implementações em classes diferentes, baseadas em herança. Isso permite tratar objetos de diferentes classes de forma uniforme através de interfaces comuns. Em C#, o polimorfismo é frequentemente visto em substituições de métodos.
+````
+class Shape
+{
+    public virtual void Draw()
+    {
+        Console.WriteLine("Drawing a shape.");
+    }
+}
+
+class Circle : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a circle.");
+    }
+}
+
+class Square : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a square.");
+    }
+}
+````
