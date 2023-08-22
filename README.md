@@ -500,4 +500,87 @@ A memória Heap é uma área de memória usada para armazenar dados de tamanho v
 
 Em resumo, a programação orientada a objetos oferece uma maneira mais estruturada e modular de organizar o código, permitindo a criação de sistemas mais flexíveis e reutilizáveis. A escolha entre os paradigmas POO e procedural depende das necessidades do projeto. A diferença entre a memória Stack e Heap reside na forma como a memória é alocada e desalocada, com a Stack sendo mais eficiente e a Heap sendo mais flexível, mas exigindo um gerenciamento cuidadoso.  
 
+### Pilares de POO com código C#:  
+1. Encapsulamento:  
+O encapsulamento é a prática de esconder os detalhes internos de uma classe e fornecer uma interface controlada para interagir com ela. Isso ajuda a proteger os dados e garante que eles sejam acessados e modificados apenas de maneira controlada. Em C#, o encapsulamento é alcançado usando modificadores de acesso (public, private, protected) e propriedades.  
+````
+class Car
+{
+    private int speed;
 
+    public int Speed
+    {
+        get { return speed; }
+        set { speed = value > 0 ? value : 0; }
+    }
+}
+````
+2. Abstração:  
+A abstração envolve a criação de modelos simplificados que representam objetos do mundo real em um programa. Ela ajuda a focar nos aspectos relevantes do objeto e a ocultar os detalhes irrelevantes. Em C#, a abstração é realizada usando classes abstratas e interfaces.  
+````
+abstract class Shape
+{
+    public abstract double Area();
+}
+
+class Circle : Shape
+{
+    private double radius;
+
+    public Circle(double r)
+    {
+        radius = r;
+    }
+
+    public override double Area()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+````
+3. Herança:  
+A herança permite criar novas classes baseadas em classes existentes, compartilhando características e comportamentos. A classe derivada herda os membros da classe base e pode adicionar ou substituir comportamentos. Em C#, a herança é implementada usando a palavra-chave class e a indicação de uma classe base com :.
+````
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+````
+4. Polimorfismo:  
+O polimorfismo permite que um mesmo método tenha diferentes implementações em classes diferentes, baseadas em herança. Isso permite tratar objetos de diferentes classes de forma uniforme através de interfaces comuns. Em C#, o polimorfismo é frequentemente visto em substituições de métodos.
+````
+class Shape
+{
+    public virtual void Draw()
+    {
+        Console.WriteLine("Drawing a shape.");
+    }
+}
+
+class Circle : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a circle.");
+    }
+}
+
+class Square : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a square.");
+    }
+}
+````
