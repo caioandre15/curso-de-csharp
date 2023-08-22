@@ -478,3 +478,26 @@ foreach (int num in numeros) {
 }
 ````
 É importante escolher a estrutura de repetição que melhor se adapte ao seu cenário específico. O for é ideal quando o número de iterações é conhecido antecipadamente, o while é útil quando a condição de parada pode variar e o foreach é excelente para percorrer coleções sem a necessidade de rastrear índices ou contadores. 
+
+## Programação Orientada a Objetos (POO):  
+A programação orientada a objetos é um paradigma de programação que se baseia na organização de código em torno de "objetos", que são instâncias de classes. Uma classe é um modelo que define atributos (variáveis) e métodos (funções) que operam sobre esses atributos. As vantagens da programação orientada a objetos incluem:  
+
+- Abstração: Permite modelar objetos do mundo real de forma mais direta, tornando o código mais compreensível e reutilizável.  
+- Encapsulamento: As informações sobre o objeto são encapsuladas dentro da classe, o que protege os dados internos e limita o acesso a eles.  
+- Herança: Permite criar novas classes baseadas em classes existentes, compartilhando características e comportamentos comuns, o que economiza tempo e reduz redundâncias.  
+- Polimorfismo: Permite que diferentes objetos respondam de maneira diferente a chamadas de métodos com o mesmo nome, tornando o código mais flexível e extensível.  
+  
+Programação Procedural:  
+A programação procedural é um paradigma mais antigo e se concentra em uma abordagem linear, onde o código é organizado em funções/procedimentos que manipulam dados. Embora seja menos abstrata que a POO, ainda é amplamente usada para tarefas mais simples e diretas.  
+
+Agora, sobre a diferença entre a memória Stack e Heap:  
+
+Memória Stack (Pilha):  
+A memória Stack é usada para armazenar variáveis locais e informações de contexto de execução durante a chamada de funções. Ela opera em uma estrutura de pilha, onde a alocação e desalocação de memória são eficientes, seguindo a regra "último a entrar, primeiro a sair" (LIFO - Last In, First Out). No entanto, a capacidade de armazenamento na Stack é limitada e a alocação é rápida, mas rígida em termos de tamanho.  
+
+Memória Heap (Monte):  
+A memória Heap é uma área de memória usada para armazenar dados de tamanho variável e objetos que podem ser alocados dinamicamente durante a execução do programa. Ao contrário da Stack, a alocação na Heap é mais flexível, mas também pode ser mais lenta e requer gerenciamento explícito (alocação e liberação de memória). A memória Heap é usada, por exemplo, quando se cria objetos grandes ou quando a quantidade de memória necessária é desconhecida durante a compilação.  
+
+Em resumo, a programação orientada a objetos oferece uma maneira mais estruturada e modular de organizar o código, permitindo a criação de sistemas mais flexíveis e reutilizáveis. A escolha entre os paradigmas POO e procedural depende das necessidades do projeto. A diferença entre a memória Stack e Heap reside na forma como a memória é alocada e desalocada, com a Stack sendo mais eficiente e a Heap sendo mais flexível, mas exigindo um gerenciamento cuidadoso.  
+
+
