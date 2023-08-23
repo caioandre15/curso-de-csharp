@@ -10,7 +10,7 @@ namespace Exer_03
 
         public double ValorTotalEmEstoque()
         {
-            return Estoque;
+            return Preco * Estoque;
         }
 
         public void AdicionarEstoqueDeProdutos(int quantidade)
@@ -25,7 +25,7 @@ namespace Exer_03
 
         public override string ToString()
         {
-            return Nome + ", $ " + Preco.ToString("F2", CultureInfo.InvariantCulture) + ", " + Estoque + " unidades, Total: $ " + (Preco * Estoque).ToString("F2", CultureInfo.InvariantCulture);
+            return Nome + ", $ " + Preco.ToString("F2", CultureInfo.InvariantCulture) + ", " + Estoque + " unidades, Total: $ " + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
 
     }
