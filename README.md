@@ -619,7 +619,7 @@ namespace Course {
 }
 ````
 
-Métodos comuns herdados da classe Obejct com explicação e exemplos:  
+Métodos comuns herdados da classe Object com explicação e exemplos:  
 
 1. ToString():  
 O método ToString() é usado para retornar uma representação em formato de string do objeto. Ele é frequentemente sobrescrito para fornecer uma representação mais significativa do objeto. Se não for sobrescrito, a implementação padrão retornará o nome completo da classe.  
