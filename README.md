@@ -584,3 +584,114 @@ class Square : Shape
     }
 }
 ````
+
+### Object e ToString  
+
+Toda classe em C# é uma subclasse da classe Object  
+• Object possui os seguintes métodos:  
+• GetType - retorna o tipo do objeto  
+• Equals - compara se o objeto é igual a outro  
+• GetHashCode - retorna um código hash do objeto  
+• ToString - converte o objeto para string  
+
+Configurar a exbição de uma classe quando for exibida com o método ToString:  
+
+````
+using System.Globalization;
+namespace Course {
+  class Produto {
+     public string Nome;
+     public double Preco;
+     public int Quantidade;
+     public double ValorTotalEmEstoque() {
+        return Preco * Quantidade;
+     }
+     public override string ToString() {
+        return Nome
+            + ", $ "
+            + Preco.ToString("F2", CultureInfo.InvariantCulture)
+            + ", "
+            + Quantidade
+            + " unidades, Total: $ "
+            + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
+     }
+  }
+}
+````
+
+Métodos comuns herdados da classe Object com explicação e exemplos:  
+
+1. ToString():  
+O método ToString() é usado para retornar uma representação em formato de string do objeto. Ele é frequentemente sobrescrito para fornecer uma representação mais significativa do objeto. Se não for sobrescrito, a implementação padrão retornará o nome completo da classe.  
+Exemplo:
+````
+public class Pessoa
+{
+    public string Nome { get; set; }
+    
+    public override string ToString()
+    {
+        return Nome;
+    }
+}
+````
+
+2. Equals():  
+O método Equals() é usado para comparar se dois objetos são iguais. A implementação padrão verifica se os objetos referenciam a mesma instância na memória. No entanto, geralmente é necessário sobrescrever esse método para comparar o conteúdo dos objetos.  
+Exemplo:
+````
+public class Ponto
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+    
+    public override bool Equals(object obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+            return false;
+            
+        Ponto outroPonto = (Ponto)obj;
+        return X == outroPonto.X && Y == outroPonto.Y;
+    }
+}
+````
+
+3. GetHashCode():  
+O método GetHashCode() retorna um valor numérico que representa o objeto. Esse valor é frequentemente usado em algoritmos de hashing e em coleções que armazenam objetos únicos.  
+Exemplo:
+````
+public class Livro
+{
+    public string Titulo { get; set; }
+    public string Autor { get; set; }
+    
+    public override int GetHashCode()
+    {
+        return Titulo.GetHashCode() ^ Autor.GetHashCode();
+    }
+}
+````
+
+4. GetType():  
+O método GetType() retorna o tipo do objeto em tempo de execução. Ele retorna um objeto da classe Type, que contém informações sobre a classe.  
+Exemplo:
+````
+Pessoa pessoa = new Pessoa();
+Type tipo = pessoa.GetType();
+Console.WriteLine($"O tipo do objeto é: {tipo.Name}");
+````
+
+5. MemberwiseClone():  
+O método MemberwiseClone() cria uma cópia superficial do objeto, copiando os valores dos campos para um novo objeto. Os campos de referência são copiados, mas eles ainda apontam para os mesmos objetos na memória.  
+Exemplo:
+````
+public class Exemplo
+{
+    public int Valor { get; set; }
+    
+    public Exemplo Clone()
+    {
+        return (Exemplo)MemberwiseClone();
+    }
+}
+````
