@@ -1,6 +1,4 @@
-﻿using System;
-using System.Globalization;
-using System.Xml;
+﻿using System.Globalization;
 
 namespace Exer_03 {
     class Program {
