@@ -695,3 +695,52 @@ public class Exemplo
     }
 }
 ````
+
+### Membros estáticos:  
+
+• Também chamados membros de classe  
+  • Em oposição a membros e instância  
+• São membros que fazem sentido independentemente de objetos. Não precisam de objeto para serem chamados. São chamados a partir do próprio nome da classe.  
+• Aplicações comuns:  
+  • Classes utilitárias  
+  • Declaração de constantes  
+• Uma classe que possui somente membros estáticos, pode ser uma classe estática também. Esta classe não poderá ser instanciada.  
+
+Ex: Math.Sqrt(double)  
+
+Explicação com exemplos em C#:  
+
+Em C#, membros estáticos são elementos de uma classe que pertencem à própria classe em vez de pertencerem a instâncias individuais dessa classe. Eles são declarados usando o modificador "static" e são compartilhados por todas as instâncias da classe e podem ser acessados diretamente através do nome da classe, sem a necessidade de criar uma instância.
+Existem dois tipos principais de membros estáticos: campos estáticos e métodos estáticos.
+
+1. Campos Estáticos:  
+Um campo estático é uma variável que pertence à classe, em vez de pertencer a uma instância específica dessa classe. Todos os objetos (instâncias) da classe compartilham o mesmo valor de campo estático. Isso pode ser útil para armazenar informações que precisam ser compartilhadas entre todas as instâncias da classe. Campos estáticos são inicializados apenas uma vez, quando a classe é carregada.
+Exemplo de declaração de campo estático:
+````
+class MinhaClasse
+{
+    public static int contador = 0;
+}
+````
+Acesso a um campo estático:  
+````
+int valorDoContador = MinhaClasse.contador;
+````
+2. Métodos Estáticos:  
+Um método estático é um método que pertence à classe em vez de pertencer a uma instância. Eles são chamados usando o nome da classe e não requerem que você crie uma instância da classe para acessá-los. Métodos estáticos geralmente são usados para realizar operações que não dependem do estado de instância da classe.  
+Exemplo de declaração de método estático:
+````
+class MinhaClasse
+{
+    public static void MetodoEstatico()
+    {
+        Console.WriteLine("Este é um método estático.");
+    }
+}
+````
+Chamando um método estático:  
+````
+MinhaClasse.MetodoEstatico();
+````
+Membros estáticos são particularmente úteis para utilitários, funções auxiliares, constantes compartilhadas e outros casos em que você deseja ter algo que seja comum a todas as instâncias da classe, sem precisar criar objetos separados.
+É importante notar que membros estáticos não podem acessar membros de instância diretamente, pois eles não têm uma instância específica a partir da qual podem acessar tais membros.
