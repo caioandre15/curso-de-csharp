@@ -8,4 +8,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Exer-04\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Exer-04\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Exer-04\**" />
+  </ItemGroup>
+
 </Project>
